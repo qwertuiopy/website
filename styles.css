@@ -2,6 +2,7 @@ body {
   background-color: purple;
 }
 h1 {
+  text-shadow: 4px, 2px;
   color: #00c3ff;
 }
 p1 {
