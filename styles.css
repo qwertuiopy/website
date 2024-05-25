@@ -4,6 +4,13 @@ body {
 h1 {
   color: #00c3ff;
 }
-p {
+p1 {
   color: #d171de;
+}
+p1:hover { 
+  color: #ff0000;
+  }
+p2 {
+  writing-mode: vertical-rl;
+  color: #55ff00;
 }
