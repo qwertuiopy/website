@@ -1,6 +1,9 @@
 body {
-  color: purple;
+  background-color: purple;
 }
 h1 {
   color: #00c3ff;
+}
+p {
+  color: #d171de;
 }
