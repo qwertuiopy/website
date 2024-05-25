@@ -17,8 +17,8 @@ p2 {
 }
 .balsa-badge {
   background-color: rgb(200, 0, 0);
-  color: white;
-  border: white;
+  color: yellow;
+  border: blue;
   height: 50px;
   width: 50px;
   border-radius: 2px;
