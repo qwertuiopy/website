@@ -1,27 +1,43 @@
 body {
-  background-color: purple;
-}
-h1 {
-  text-shadow: 4px, 2px;
-  color: #00c3ff;
-}
-p1 {
-  color: #d171de;
-}
-p1:hover { 
-  color: #ff0000;
+    background-color: purple;
   }
-p2 {
-  writing-mode: vertical-rl;
-  color: #55ff00;
-}
-.balsa-badge {
-  margin-left: 20px;
-  background-color: rgb(200, 0, 0);
-  color: yellow;
-  border: blue;
-  height: 50px;
-  width: 50px;
-  border-radius: 2px;
-  cursor: pointer;
-}
+  h1 {
+    text-shadow: 4px, 2px;
+    color: #00c3ff;
+  }
+  h1:hover {
+    color: rgb(182, 245, 255)
+  }
+  p1 {
+    color: #d171de;
+  }
+  p1:hover { 
+    color: #ff0000;
+    }
+  p2 {
+    writing-mode: vertical-rl;
+    color: #55ff00;
+  }
+  p2:hover {
+    color:pink
+  }
+  .balsa-badge {
+    font-weight: bold;
+    margin-left: 20px;
+    background-color: rgb(200, 0, 0);
+    color: rgb(255, 225, 0);
+    border: blue;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s, 
+    color 0.2s;
+    padding: 10px;
+  }
+  .balsa-badge:hover {
+    background-color: rgb(255, 225, 0);
+    color: red;
+    
+  }
+  p3 {
+    color:aliceblue
+  }
