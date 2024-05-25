@@ -21,6 +21,6 @@ p2 {
   border: white;
   height: 50px;
   width: 50px;
-  boarder-radius: 2px;
+  border-radius: 2px;
   cursor: pointer;
 }
