@@ -41,12 +41,12 @@ body {
   p3 {
     color:aliceblue
   }
-  .participate {
+  #participate {
     color:ghostwhite
   }
-  .webhunt {
+  #webhunt {
     color:chartreuse
   }
-  .webhunt:hover {
+  #webhunt:hover {
     color:#d171de
   }
