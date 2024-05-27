@@ -34,7 +34,7 @@
   </div>
   <div> <!--Notice board-->
    <p id="message board">Add a message to the message board</p>
-    <form name="messageboard" action="/form.js"> <!--Message board form-->
+    <form name="messageboard"></form> <!--Message board form-->
       <label for="username">Username:</label>
       <input type="text" id="username" name="username"><br><br>
       <label for="message">Message:</label>"
@@ -42,7 +42,12 @@
       <input type="submit" value="submit">
    </form>
    <p id="messageboardtitle">MESSAGE BOARD</p>
-   <p id="messages"></p>
+   <p id="post"></p>
+   <script>
+    var name = document.getElementById("username");
+    var message = document.getElementById("message");
+    document.getElementById("post").innerHTML = message+" - "+name
+    </script>
   </div>
 </body>
 </html>
