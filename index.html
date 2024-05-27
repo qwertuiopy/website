@@ -33,26 +33,25 @@
     <a id="webhunt" href="/images/webhunt.png" download>here</a>
   </div>
   <div> <!--Notice board-->
-   <p id="message board">Add a message to the message board</p>
-    <form name="messageboard"> <!--Message board form-->
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username"><br><br>
-      <label for="message">Message:</label>"
-      <input type="text" id="message" name="message"><br><br>
-      <input type="submit" value="submit">
-   </form>
+    <p id="message board">Add a message to the message board</p>
+       <input type="text" id="username" name="username"><br>
+       <input type="text" id="message" name="message"><br><br>
+       <button id="submit" onclick="post()">submit</button>
+       
+    <p id="messageboardtitle">MESSAGE BOARD</p>
+    <p id="newuser"></p><p>wrote: </p><p id="post"></p>
+   
    <script>
-      var form = document.getElementById('messageboard')
-
-      form.addEventListener('submit',function(event)){
-        var username = document.getElementById('username').value 
-        var message = document.getElementById('message').value
-        document.getElementById("post").innerHTML = message.value;
-        document.getElementById("newuser").innerHTML = name.value;
-      }
-   </script>
-   <p id="messageboardtitle">MESSAGE BOARD</p>
-   <p id="newuser"></p><p>wrote: </p><p id="post"></p>
-  </div>
+      function post() {
+         const username = document.getElementById("username");
+         const usernameValue = username.value;
+         const message = document.getElementById("message");
+         const messageValue = message.value;
+         document.getElementById("post").innerHTML = messageValue;
+         document.getElementById("newuser").innerHTML = usernameValue;
+       }
+    </script>
+    
+   </div>
 </body>
 </html>
