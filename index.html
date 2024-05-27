@@ -42,27 +42,48 @@
     <div id="messageboardcontainer"></div>
    
    <script>
-      function post() {
-        //gets the value of the username box and assigns it to a variable
-         const username = document.getElementById("username");
-         const usernameValue = username.value;
-        //gets the value of the message box and assigns it to a variable
-         const message = document.getElementById("message");
-         const messageValue = message.value;
+  //save messages to Local Storage
+    function saveMessages() {
+        const messageContainer = document.getElementById("messageboardcontainer");
+        localStorage.setItem("messages", messagesContainer.innerHTML);
+      }
+  //loads saved messages
+    function loadMessages() {
+      const messagesContainer = document.getElementById("messageboardcontainer");
+      const savedMessages = localStorage.getItem("messages");
+      if (savedMessages) {
+        messagesContainer.innerHTML = savedMessages;
+      }
+    }
+  //loads messages when window is opened
+    window.onload = loadMessages;
+
+  // posts a message  
+    function post() {
+      //gets the value of the username box and assigns it to a variable
+        const username = document.getElementById("username");
+        const usernameValue = username.value;
+      //gets the value of the message box and assigns it to a variable
+        const message = document.getElementById("message");
+        const messageValue = message.value;
         
-         //creates a new element for the username
+      //creates a new element for the username
         const newUserElement = document.createElement("p");
         newUserElement.textContent = "--" + usernameValue;
 
-        //creates a new element for the message
+      //creates a new element for the message
         const postElement = document.createElement("p");
         postElement.textContent = messageValue;
         
-        //add elements to message baord
+      //add elements to message baord
         const messagesContainer = document.getElementById("messageboardcontainer");
         messagesContainer.appendChild(postElement);
         messagesContainer.appendChild(newUserElement);
-        //Clear input field
+
+      //saves message
+      savemessages();
+      
+      //Clear input field
         username.value = "";
         message.value = "";
        }
