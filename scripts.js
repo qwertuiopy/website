@@ -7,6 +7,6 @@ function collectfishbadge() {
 function newpost() {
     var name = document.getElementById("username");
     var message = document.getElementById("message");
-    document.getElementById("post").innerHTML = message
-    document.getElementById("username").innerHTML = name
+    document.getElementById("post").innerHTML = message;
+    document.getElementById("username").innerHTML = name;
 }
