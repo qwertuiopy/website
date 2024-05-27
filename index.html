@@ -34,15 +34,26 @@
   </div>
   <div> <!--Notice board-->
    <p id="message board">Add a message to the message board</p>
-    <form name="messageboard" action="/scripts.js" method="GET"> <!--Message board form-->
+    <form name="messageboard"> <!--Message board form-->
       <label for="username">Username:</label>
       <input type="text" id="username" name="username"><br><br>
       <label for="message">Message:</label>"
       <input type="text" id="message" name="message"><br><br>
-      <input type="submit" value="submit" onsubmit="return newpost()">
+      <input type="submit" value="submit">
    </form>
+   <script>
+      var form = document.getElementById('messageboard')
+
+      form.addEventListener('submit',function(event)){
+        event.preventDefault()
+        var username = document.getElementById('username').value 
+        var message = document.getElementById('message').value
+        document.getElementById("post").innerHTML = message;
+        document.getElementById("newuser").innerHTML = name;
+      }
+   </script>
    <p id="messageboardtitle">MESSAGE BOARD</p>
-   <p id="newuser"></p><p>wrote</p><p id="post"></p>
+   <p id="newuser"></p><p>wrote: </p><p id="post"></p>
   </div>
 </body>
 </html>
