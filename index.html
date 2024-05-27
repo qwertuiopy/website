@@ -39,16 +39,32 @@
        <button id="submit" onclick="post()">submit</button>
        
     <p id="messageboardtitle">MESSAGE BOARD</p>
-    <p id="newuser"></p><p>wrote: </p><p id="post"></p>
+    <div id="messageboardcontainer"
    
    <script>
       function post() {
+        //gets the value of the username box and assigns it to a variable
          const username = document.getElementById("username");
          const usernameValue = username.value;
+        //gets the value of the message box and assigns it to a variable
          const message = document.getElementById("message");
          const messageValue = message.value;
-         document.getElementById("post").innerHTML = messageValue;
-         document.getElementById("newuser").innerHTML = usernameValue;
+        
+         //creates a new element for the username
+        const newUserElement = document.createElement("p");
+        newUserElement.textContent = usernameValue;
+
+        //creates a new element for the message
+        const postElement = document.createElement("p");
+        postElement.textContent = "--" + messageValue;
+        
+        //add elements to message baord
+        const messagesContainer = document.getElementById("messageboardcontainer");
+        messagesContainer.appendChild(postElement);
+        messagesContainer.appendChild(newUserElement);
+        //Clear input field
+        username.value = "";
+        message.value = "";
        }
     </script>
     
