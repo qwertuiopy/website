@@ -34,8 +34,8 @@
   </div>
   <div> <!--Notice board-->
     <p id="message board">Add a message to the message board</p>
-       <input type="text" id="username" name="username"><br>
-       <input type="text" id="message" name="message"><br><br>
+       <input type="text" id="username" name="username" placeholder="type your username"><br>
+       <input type="text" id="message" name="message" placeholder="type your message"><br><br>
        <button id="submit" onclick="post()">submit</button>
        
     <p id="messageboardtitle">MESSAGE BOARD</p>
@@ -52,11 +52,11 @@
         
          //creates a new element for the username
         const newUserElement = document.createElement("p");
-        newUserElement.textContent = usernameValue;
+        newUserElement.textContent = "--" + usernameValue;
 
         //creates a new element for the message
         const postElement = document.createElement("p");
-        postElement.textContent = "--" + messageValue;
+        postElement.textContent = messageValue;
         
         //add elements to message baord
         const messagesContainer = document.getElementById("messageboardcontainer");
