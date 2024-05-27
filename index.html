@@ -47,8 +47,8 @@
       form.addEventListener('submit',function(event)){
         var username = document.getElementById('username').value 
         var message = document.getElementById('message').value
-        document.getElementById("post").innerHTML = message;
-        document.getElementById("newuser").innerHTML = name;
+        document.getElementById("post").innerHTML = message.value;
+        document.getElementById("newuser").innerHTML = name.value;
       }
    </script>
    <p id="messageboardtitle">MESSAGE BOARD</p>
