@@ -75,15 +75,16 @@
         const postElement = document.createElement("p");
         postElement.textContent = messageValue;
       
-      //checks number of messages, removes excess
-      if (messagesContainer.children.length >= 10) {
-        messagesContainer.removeChild(messagesContainer.firstChild);
-        messagesContainer.removeChild(messagesContainer.firstChild);
-      }
+  
       //add elements to message baord
         const messagesContainer = document.getElementById("messageboardcontainer");
         messagesContainer.appendChild(postElement);
         messagesContainer.appendChild(newUserElement);
+
+    //checks number of messages, removes excess
+    if (messagesContainer.children.length >= 10) {
+        messagesContainer.removeChild(messagesContainer.firstChild);
+        messagesContainer.removeChild(messagesContainer.firstChild);
 
       //saves message
       saveMessages();
