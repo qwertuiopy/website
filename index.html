@@ -45,7 +45,6 @@
       var form = document.getElementById('messageboard')
 
       form.addEventListener('submit',function(event)){
-        event.preventDefault()
         var username = document.getElementById('username').value 
         var message = document.getElementById('message').value
         document.getElementById("post").innerHTML = message;
