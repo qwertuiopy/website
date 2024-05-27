@@ -44,7 +44,7 @@
    <script>
   //save messages to Local Storage
     function saveMessages() {
-        const messageContainer = document.getElementById("messageboardcontainer");
+        const messagesContainer = document.getElementById("messageboardcontainer");
         localStorage.setItem("messages", messagesContainer.innerHTML);
       }
   //loads saved messages
@@ -81,7 +81,7 @@
         messagesContainer.appendChild(newUserElement);
 
       //saves message
-      savemessages();
+      saveMessages();
       
       //Clear input field
         username.value = "";
