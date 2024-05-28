@@ -61,19 +61,19 @@
   // posts a message  
     function post() {
       //gets the value of the username box and assigns it to a variable
-        const username = document.getElementById("username");
-        const usernameValue = username.value;
+        const username = document.getElementById("username").value;
+        
       //gets the value of the message box and assigns it to a variable
-        const message = document.getElementById("message");
-        const messageValue = message.value;
+        const message = document.getElementById("message").value;
+        
         
       //creates a new element for the username
         const newUserElement = document.createElement("p");
-        newUserElement.textContent = "--" + usernameValue;
+        newUserElement.textContent = "--" + username;
 
       //creates a new element for the message
         const postElement = document.createElement("p");
-        postElement.textContent = messageValue;
+        postElement.textContent = message;
       
   
       //add elements to message baord
@@ -90,8 +90,8 @@
       saveMessages();
       
       //Clear input field
-        username.value = "";
-        message.value = "";
+      document.getElementById("username").value = "";
+      document.getElementById("message").value = "";
        }
       }
     </script>
