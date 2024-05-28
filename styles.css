@@ -42,15 +42,27 @@ body {
     color:aliceblue
   }
   #participate {
-    color:ghostwhite
+    color:ghostwhite;
   }
   #webhunt {
-    color:chartreuse
+    color:chartreuse;
   }
   #webhunt:hover {
-    color:#d171de
+    color:#d171de;
   }
   .construction {
     font-size: xx-large;
-    color:gold
+    color:gold;
+  }
+  #message board {
+    color: white
+  }
+  #messageboardtitle {
+    color:white;
+    font-weight: bold;
+    font-size: large;
+  }
+  #messagecontainer {
+    background-color:white;
+    color:purple
   }
